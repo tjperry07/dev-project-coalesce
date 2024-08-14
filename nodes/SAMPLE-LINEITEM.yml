@@ -11,7 +11,7 @@ operation:
     columns:
       - acceptedValues:
           strictMatch: true
-          values: []
+          values: {}
         appliedColumnTests: {}
         columnReference:
           columnCounter: e9ea1254-edec-460e-895c-c3439fcf6b51
