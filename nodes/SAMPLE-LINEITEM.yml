@@ -11,8 +11,8 @@ operation:
     columns:
       - acceptedValues:
           strictMatch: true
-          values: {}
-        appliedColumnTests: []
+          values: []
+        appliedColumnTests: {}
         columnReference:
           columnCounter: e9ea1254-edec-460e-895c-c3439fcf6b51
           stepCounter: 45ef876a-91d8-4db3-8bc6-27d96889be53
