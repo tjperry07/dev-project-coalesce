@@ -1,0 +1,89 @@
+fileVersion: 1
+id: b0cd7d45-ce90-47e8-beb9-8d48d0d19597
+name: DT_WRK_DT_CUSTOMER_NATION_REGION_DT_ORDERS_LINEITEM
+operation:
+  config:
+    clusterKey: false
+    clusterKeyConfig:
+      items:
+        - {}
+    clusterKeyConfigExpressions:
+      items:
+        - {}
+    clusterKeyExpressions: false
+    downstreamOption: false
+    groupByAll: true
+    initialize: ON_SCHEDULE
+    insertStrategy: UNION ALL
+    lagSpecification:
+      items:
+        - lagPeriod: Minutes
+          lagValue: "15"
+    refresh_mode: AUTO
+    selectDistinct: false
+    warehouseName: COMPUTE_WH
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: dynamic table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d7dc2f10-24d5-4a00-aa70-8cfe71b045a3
+          stepCounter: b0cd7d45-ce90-47e8-beb9-8d48d0d19597
+        config: {}
+        dataType: VARCHAR(25)
+        description: ""
+        name: C_NAME
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c09e649d-9336-4330-8972-e08c8d0532a7
+                stepCounter: caab5bd4-8140-43e7-aedc-515dd6925e96
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a110edf0-82b8-47f8-9a77-16615fcb0518
+          stepCounter: b0cd7d45-ce90-47e8-beb9-8d48d0d19597
+        config: {}
+        dataType: NUMBER(12,2)
+        description: ""
+        name: L_QUANTITY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 56e6245d-dc02-4b5b-b9b3-66227af2305f
+                stepCounter: 69095c99-3800-4e7e-b9f8-cbaf40750d2e
+            transform: |
+              sum("DT_ORDERS_LINEITEM"."L_QUANTITY")
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          DT_CUSTOMER_NATION_REGION: caab5bd4-8140-43e7-aedc-515dd6925e96
+          DT_ORDERS_LINEITEM: 69095c99-3800-4e7e-b9f8-cbaf40750d2e
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: WORK
+            nodeName: DT_CUSTOMER_NATION_REGION
+          - locationName: WORK
+            nodeName: DT_ORDERS_LINEITEM
+        join:
+          joinCondition: |-
+            FROM {{ ref('WORK', 'DT_ORDERS_LINEITEM') }} "DT_ORDERS_LINEITEM"
+            INNER JOIN {{ ref('WORK', 'DT_CUSTOMER_NATION_REGION') }} "DT_CUSTOMER_NATION_REGION"
+            ON "DT_ORDERS_LINEITEM"."O_CUSTKEY" = "DT_CUSTOMER_NATION_REGION"."C_CUSTKEY"
+        name: DT_WRK_DT_CUSTOMER_NATION_REGION_DT_ORDERS_LINEITEM
+        noLinkRefs: []
+  name: DT_WRK_DT_CUSTOMER_NATION_REGION_DT_ORDERS_LINEITEM
+  overrideSQL: false
+  schema: ""
+  sqlType: dynamicTables:::156
+  type: sql
+  version: 1
+type: Node
