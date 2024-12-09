@@ -10,6 +10,8 @@ metadata:
     plural: SQLs
     tagColor: '#2EB67D'
 
+    deployStrategy: advanced
+
     config:
     - groupName: 'Options'
       items:

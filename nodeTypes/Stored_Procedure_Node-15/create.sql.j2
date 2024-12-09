@@ -1,4 +1,1 @@
-{% if config.SQL1 %}
-{{ stage('SQL1') }}
-{{ config.SQL1 }}
-{% endif %}
+{% if desiredState == currentState %}    {{ stage('Nothing to do.') }}    SELECT 1 = 0{% elif desiredState != undefined %}    {{ stage('Create SQL1') }}    {{ desiredState.config.SQL1 }} {% elif currentState != undefined and desiredState == undefined %}    {# Stored Procedure Name #}    {% set targetObjectDatabase = ref_no_link(currentState.node.location.name, currentState.node.name).split('.')[0] %}     {% set targetObjectSchema = ref_no_link(currentState.node.location.name, currentState.node.name).split('.')[1] %}     {% set fullyQualifiedTargetObjectName = ref_no_link(currentState.node.location.name, currentState.node.name) %}        {{ stage('Drop SQL1') }}    {# you need to figure out what DROP SQL needs to be executed #}    DROP PROCEDURE IF EXISTS {{ fullyQualifiedTargetObjectName }} (VARCHAR){% else %}    {{ stage('Unknown State') }}    SELECT 1 = 1{% endif %}
