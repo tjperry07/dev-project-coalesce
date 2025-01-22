@@ -1,0 +1,115 @@
+fileVersion: 1
+id: 9ee5c8a0-b962-48ef-96c5-2e5e3e2516bc
+name: NOSTROMO_SRC2
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: SAMPLE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d0d3a1be-4068-4f5d-b61f-c74bf4952025
+          stepCounter: 9ee5c8a0-b962-48ef-96c5-2e5e3e2516bc
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: N_CREWKEY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 11611358-8d45-4284-ad77-d377ceb117dc
+          stepCounter: 9ee5c8a0-b962-48ef-96c5-2e5e3e2516bc
+        config: {}
+        dataType: VARCHAR(50)
+        defaultValue: ""
+        description: ""
+        name: N_FIRSTNAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8c45b2ed-1e76-4c1f-802c-8f39dd75de0c
+          stepCounter: 9ee5c8a0-b962-48ef-96c5-2e5e3e2516bc
+        config: {}
+        dataType: VARCHAR(1)
+        defaultValue: ""
+        description: ""
+        name: N_MIDDLEINITIAL
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 30774bd2-455e-4211-95f0-2b9e45363dde
+          stepCounter: 9ee5c8a0-b962-48ef-96c5-2e5e3e2516bc
+        config: {}
+        dataType: VARCHAR(50)
+        defaultValue: ""
+        description: ""
+        name: N_LASTNAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 01d323c6-5958-4e47-a521-219bad4ac172
+          stepCounter: 9ee5c8a0-b962-48ef-96c5-2e5e3e2516bc
+        config: {}
+        dataType: VARCHAR(152)
+        defaultValue: ""
+        description: ""
+        name: N_COMMENT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('SAMPLE', 'NOSTROMO_SRC2') }}
+  name: NOSTROMO_SRC2
+  schema: ""
+  sqlType: Source
+  table: NOSTROMO_SRC2
+  type: sourceInput
+  version: 1
+type: Node

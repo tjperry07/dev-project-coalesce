@@ -1,0 +1,96 @@
+fileVersion: 1
+id: e49d528e-dbbc-48c5-82d7-408a5c44f05f
+name: NOSTROMO_SRC3
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: SAMPLE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9cf87c06-3016-44e7-ac34-efd58c83cab4
+          stepCounter: e49d528e-dbbc-48c5-82d7-408a5c44f05f
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: N_CREWKEY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8f1f539f-1077-4740-b71e-2cd3d08ba760
+          stepCounter: e49d528e-dbbc-48c5-82d7-408a5c44f05f
+        config: {}
+        dataType: VARCHAR(50)
+        defaultValue: ""
+        description: ""
+        name: N_FIRSTNAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b28e03e2-a8c2-4a97-a676-399b5ddd0258
+          stepCounter: e49d528e-dbbc-48c5-82d7-408a5c44f05f
+        config: {}
+        dataType: VARCHAR(50)
+        defaultValue: ""
+        description: ""
+        name: N_LASTNAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a32323d1-705e-4bb0-8318-9fb105f32f65
+          stepCounter: e49d528e-dbbc-48c5-82d7-408a5c44f05f
+        config: {}
+        dataType: VARCHAR(152)
+        defaultValue: ""
+        description: ""
+        name: N_COMMENT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('SAMPLE', 'NOSTROMO_SRC3') }}
+  name: NOSTROMO_SRC3
+  schema: ""
+  sqlType: Source
+  table: NOSTROMO_SRC3
+  type: sourceInput
+  version: 1
+type: Node

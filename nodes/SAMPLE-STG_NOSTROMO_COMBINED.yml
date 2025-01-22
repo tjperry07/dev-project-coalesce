@@ -1,0 +1,167 @@
+fileVersion: 1
+id: 0fe941d5-9422-4484-b7c5-1aef29b250df
+name: STG_NOSTROMO_COMBINED
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: true
+  locationName: SAMPLE
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f8457ba3-fda2-4141-bcb5-857140b7724b
+          stepCounter: 0fe941d5-9422-4484-b7c5-1aef29b250df
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: N_CREWKEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 32991b79-632f-4729-9c84-61f53e53069c
+                stepCounter: 82023b9f-eafe-4a8b-8f9b-b31bd3323d2c
+            transform: ""
+          - columnReferences:
+              - columnCounter: d0d3a1be-4068-4f5d-b61f-c74bf4952025
+                stepCounter: 9ee5c8a0-b962-48ef-96c5-2e5e3e2516bc
+            transform: ""
+          - columnReferences:
+              - columnCounter: 9cf87c06-3016-44e7-ac34-efd58c83cab4
+                stepCounter: e49d528e-dbbc-48c5-82d7-408a5c44f05f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f158fed0-78b2-400f-a24b-1fb5dd385f2b
+          stepCounter: 0fe941d5-9422-4484-b7c5-1aef29b250df
+        config: {}
+        dataType: VARCHAR(50)
+        description: ""
+        name: N_FIRSTNAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7772191a-c470-4b20-b90b-79fbfcd41072
+                stepCounter: 82023b9f-eafe-4a8b-8f9b-b31bd3323d2c
+            transform: ""
+          - columnReferences:
+              - columnCounter: 11611358-8d45-4284-ad77-d377ceb117dc
+                stepCounter: 9ee5c8a0-b962-48ef-96c5-2e5e3e2516bc
+            transform: ""
+          - columnReferences:
+              - columnCounter: 8f1f539f-1077-4740-b71e-2cd3d08ba760
+                stepCounter: e49d528e-dbbc-48c5-82d7-408a5c44f05f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fd76799a-f594-4668-8d13-52372bd125b1
+          stepCounter: 0fe941d5-9422-4484-b7c5-1aef29b250df
+        config: {}
+        dataType: VARCHAR(50)
+        description: ""
+        name: N_LASTNAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f7d3b0ac-8ea4-4cc6-8299-54443242a70f
+                stepCounter: 82023b9f-eafe-4a8b-8f9b-b31bd3323d2c
+            transform: ""
+          - columnReferences:
+              - columnCounter: 30774bd2-455e-4211-95f0-2b9e45363dde
+                stepCounter: 9ee5c8a0-b962-48ef-96c5-2e5e3e2516bc
+            transform: ""
+          - columnReferences:
+              - columnCounter: b28e03e2-a8c2-4a97-a676-399b5ddd0258
+                stepCounter: e49d528e-dbbc-48c5-82d7-408a5c44f05f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8cb29d5c-eac4-4bc5-a3e1-ac9069adab6f
+          stepCounter: 0fe941d5-9422-4484-b7c5-1aef29b250df
+        config: {}
+        dataType: VARCHAR(152)
+        description: ""
+        name: N_COMMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 24cc3381-cd9d-491a-8ec8-166d29769610
+                stepCounter: 82023b9f-eafe-4a8b-8f9b-b31bd3323d2c
+            transform: ""
+          - columnReferences:
+              - columnCounter: 01d323c6-5958-4e47-a521-219bad4ac172
+                stepCounter: 9ee5c8a0-b962-48ef-96c5-2e5e3e2516bc
+            transform: ""
+          - columnReferences:
+              - columnCounter: a32323d1-705e-4bb0-8318-9fb105f32f65
+                stepCounter: e49d528e-dbbc-48c5-82d7-408a5c44f05f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4f4ed987-12e5-4d7f-b051-ba2ba6e75a83
+          stepCounter: 0fe941d5-9422-4484-b7c5-1aef29b250df
+        config: {}
+        dataType: VARCHAR(1)
+        description: ""
+        name: N_MIDDLEINITIAL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+          - columnReferences:
+              - columnCounter: 8c45b2ed-1e76-4c1f-802c-8f39dd75de0c
+                stepCounter: 9ee5c8a0-b962-48ef-96c5-2e5e3e2516bc
+            transform: ""
+          - columnReferences: []
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SAMPLE
+            nodeName: NOSTROMO_SRC1
+        join:
+          joinCondition: FROM {{ ref('SAMPLE', 'NOSTROMO_SRC1') }} "NOSTROMO_SRC1"
+        name: SRC1
+        noLinkRefs: []
+      - aliases:
+          NOSTROMO_SRC2: 9ee5c8a0-b962-48ef-96c5-2e5e3e2516bc
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SAMPLE
+            nodeName: NOSTROMO_SRC2
+        join:
+          joinCondition: FROM {{ ref('SAMPLE', 'NOSTROMO_SRC2') }} "NOSTROMO_SRC2"
+        name: SRC2
+        noLinkRefs: []
+      - aliases:
+          NOSTROMO_SRC3: e49d528e-dbbc-48c5-82d7-408a5c44f05f
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SAMPLE
+            nodeName: NOSTROMO_SRC3
+        join:
+          joinCondition: FROM {{ ref('SAMPLE', 'NOSTROMO_SRC3') }} "NOSTROMO_SRC3"
+        name: SRC3
+        noLinkRefs: []
+  name: STG_NOSTROMO_COMBINED
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
