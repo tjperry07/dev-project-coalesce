@@ -3,19 +3,19 @@ config:
     nodeTypes:
       "162":
         defaultStorageLocation: null
-        isDisabled: false
+        isDisabled: true
       "179":
         defaultStorageLocation: null
-        isDisabled: false
+        isDisabled: true
       "180":
         defaultStorageLocation: null
-        isDisabled: false
+        isDisabled: true
       "183":
         defaultStorageLocation: null
         isDisabled: false
       "264":
         defaultStorageLocation: null
-        isDisabled: false
+        isDisabled: true
   packageVariables: ""
 fileVersion: 1
 id: "@coalesce/base-node-types-advanced-deploy"

@@ -1,0 +1,6 @@
+defaultStorageMapping: WORK
+fileVersion: 1
+locations:
+  - DEV
+  - SAMPLE
+  - WORK

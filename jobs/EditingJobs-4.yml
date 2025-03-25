@@ -1,0 +1,6 @@
+excludeSelector: "{ location: WORK name: DIM_CUSTOMER_HASH } OR { location: WORK name: DIM_ORDERS_Copy }"
+fileVersion: 1
+id: "4"
+includeSelector: "{ location: WORK name: STG_CUSTOMER } OR { location: SAMPLE name: LINEITEM } OR { location: WORK name: DIM_REGION }"
+name: Editing Jobs
+type: Job

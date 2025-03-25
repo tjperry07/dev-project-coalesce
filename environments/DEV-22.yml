@@ -1,11 +1,14 @@
 fileVersion: 1
 id: "22"
 mappingDefinitions:
+  DEV:
+    database: TATIANA_GENERAL
+    schema: DEV
   SAMPLE:
     database: SNOWFLAKE_SAMPLE_DATA
     schema: TPCH_SF100
   WORK:
-    database: TATIANA_DOCS_TESTING_MACROS
-    schema: DEV
+    database: TATIANA_GENERAL
+    schema: WORK
 name: DEV
 type: Environment
