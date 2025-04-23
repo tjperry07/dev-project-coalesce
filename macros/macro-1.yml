@@ -1,0 +1,8 @@
+fileVersion: 1
+id: "1"
+macroString: |
+  {%- macro say_hello() -%}
+      'hello'
+  {%- endmacro %}
+name: macro
+type: Macro
