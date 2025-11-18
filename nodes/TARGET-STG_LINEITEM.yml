@@ -241,6 +241,26 @@ operation:
               - columnCounter: 220d473c-e4ae-44d1-8f6d-5aed053e915b
                 stepCounter: b27542e9-64e2-4133-9260-d5da26d445b2
             transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 55d5c7b6-da50-419b-9fc1-eb8b52fa1066
+          stepCounter: 076df7bf-7eb0-4960-a62a-e3002ad0b37e
+        config: {}
+        dataType: VARCHAR(44)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: RUN_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "TATIANA_GENERAL.DEV.GET_RUN_ID() "
+        systemColumnType: None
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
