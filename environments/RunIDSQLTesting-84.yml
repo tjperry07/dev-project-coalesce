@@ -1,0 +1,11 @@
+fileVersion: 1
+id: "84"
+mappingDefinitions:
+  SOURCE:
+    database: TATIANA_GENERAL
+    schema: DEV
+  TARGET:
+    database: TATIANA_GENERAL
+    schema: WORK
+name: Run ID SQL Testing
+type: Environment
