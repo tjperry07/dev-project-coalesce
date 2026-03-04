@@ -1,5 +1,11 @@
 fileVersion: 1
 id: "60"
-mappingDefinitions: {}
+mappingDefinitions:
+  SOURCE:
+    database: SNOWFLAKE_SAMPLE_DATA
+    schema: TPCH_SF1
+  TARGET:
+    database: TATIANA_GENERAL
+    schema: PROD
 name: I have Authentication
 type: Environment
