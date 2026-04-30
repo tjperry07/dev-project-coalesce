@@ -1,5 +1,11 @@
 fileVersion: 1
 id: "68"
-mappingDefinitions: {}
+mappingDefinitions:
+  SRC:
+    database: SNOWFLAKE_SAMPLE_DATA
+    schema: TPCH_SF1
+  TARGET:
+    database: TATIANA_GENERAL
+    schema: PROD
 name: Key Pair Auth
 type: Environment
