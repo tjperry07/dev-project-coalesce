@@ -1,0 +1,18 @@
+@id("22222222-2222-4222-8222-222222222202")
+@nodeType("b2c3d4e5-f6a7-4901-bcde-f123456789ab")
+@materializationType("table")
+SELECT
+  L_RETURNFLAG AS L_RETURNFLAG @isBusinessKey @notNull,
+  L_LINESTATUS AS L_LINESTATUS @isBusinessKey @notNull,
+  SUM(L_QUANTITY) AS SUM_QTY @isChangeTracking,
+  SUM(L_EXTENDEDPRICE) AS SUM_BASE_PRICE @isChangeTracking,
+  SUM(L_EXTENDEDPRICE * (1 - L_DISCOUNT)) AS SUM_DISC_PRICE @isChangeTracking,
+  SUM(L_EXTENDEDPRICE * (1 - L_DISCOUNT) * (1 + L_TAX)) AS SUM_CHARGE @isChangeTracking,
+  AVG(L_QUANTITY) AS AVG_QTY @isChangeTracking,
+  AVG(L_EXTENDEDPRICE) AS AVG_PRICE @isChangeTracking,
+  AVG(L_DISCOUNT) AS AVG_DISC @isChangeTracking,
+  COUNT(*) AS LINE_COUNT @isChangeTracking
+FROM {{ ref('TARGET', 'STG_LINEITEM_CLOSED_WINDOW') }}
+GROUP BY
+  L_RETURNFLAG,
+  L_LINESTATUS;
