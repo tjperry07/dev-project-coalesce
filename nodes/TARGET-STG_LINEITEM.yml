@@ -241,6 +241,26 @@ operation:
               - columnCounter: 41392b4e-dc1e-4a67-a558-b67e1133e6b1
                 stepCounter: 8084c93c-2b82-4364-a384-fb032ecf9a7f
             transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 75a9e378-3144-4bfa-a9fa-7ab45c1d615f
+          stepCounter: 01920834-c98c-4bd1-8935-78507e4e44ca
+        config: {}
+        dataType: VARCHAR(44)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: L_METADATA_CHANGE_TEST
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: ""
+        systemColumnType: None
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
