@@ -249,7 +249,7 @@ operation:
           columnCounter: 75a9e378-3144-4bfa-a9fa-7ab45c1d615f
           stepCounter: 01920834-c98c-4bd1-8935-78507e4e44ca
         config: {}
-        dataType: VARCHAR(44)
+        dataType: DATE
         defaultValue: ""
         description: ""
         keyColumnType: None
